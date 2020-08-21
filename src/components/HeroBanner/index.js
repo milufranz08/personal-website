@@ -12,8 +12,6 @@ const HeroBanner = () => {
           title
           subtitle
           content
-          linkTo
-          linkText
         }
       }
     }
@@ -26,8 +24,6 @@ const HeroBanner = () => {
       title={heroBanner.title}
       subtitle={heroBanner.subtitle}
       content={heroBanner.content}
-      linkTo={heroBanner.linkTo}
-      linkText={heroBanner.linkText}
     />
   );
 };
@@ -36,8 +32,6 @@ HeroBanner.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired
 };
 
 export default HeroBanner;
