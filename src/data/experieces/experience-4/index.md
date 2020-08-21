@@ -1,9 +1,9 @@
 ---
 category: 'experiences'
-company: 'Netlify'
-position: 'Senior Frontend Developer'
-startDate: 'Jun 2015'
-endDate: 'Jan 2018'
+company: 'Mile Two LLC'
+position: 'Software Engineer'
+startDate: 'Sep 2019'
+endDate: 'Present'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Developed products/prototypes for both commercial and DoD clients using JavaScript/React as the frontend and Python/Flask as the backend. Collaborated with cross-functional teams to develop and design tools to improve analyst’s efficiency and workflow.

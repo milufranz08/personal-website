@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'Gatsby'
-percentage: 68
+title: 'GraphQL'
+percentage: 62
 ---

@@ -1,9 +1,9 @@
 ---
 category: 'experiences'
-company: 'Facebook'
-position: 'Frontend Developer'
-startDate: 'May 2013'
-endDate: 'Jun 2015'
+company: 'Franklin University'
+position: 'Computer Science Tutor'
+startDate: 'Aug 2018'
+endDate: 'Sep 2019'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Worked with students on one-hour sessions to clarify concepts across a variety of Computer Science subjects such as database management, data structures and algorithms.

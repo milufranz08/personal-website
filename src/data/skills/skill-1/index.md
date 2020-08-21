@@ -1,5 +1,6 @@
 ---
 category: 'skills'
-title: 'HTML'
-percentage: 60
+title: 'JavaScript'
+percentage: 80
 ---
+

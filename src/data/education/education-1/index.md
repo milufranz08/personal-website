@@ -1,9 +1,11 @@
 ---
 category: 'education'
-university: 'Columbia University'
-degree: 'Bachelor'
-startDate: 'Oct 2005'
-endDate: 'Jul 2008'
+university: 'Sinclair Community College'
+degree: 'Associate'
+startDate: 'Dec 2009'
+endDate: 'Dec 2011'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Associate of Applied Science in Visual Communications, A.A.S.
+
+Accredited by the National Association of Schools of Art and Design (NASAD)

@@ -1,11 +1,9 @@
 ---
 category: 'experiences'
-company: 'Aizoon Reply'
-position: 'UI/UX Designer'
-startDate: 'Jan 2011'
-endDate: 'May 2013'
+company: 'Code for Dayton'
+position: 'Volunteer'
+startDate: 'Jan 2018'
+endDate: 'Mar 2018'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Collaborated on the creation of an anonymous platform where direct care nurses are able to report instances of compromised patient safety due to inadequate staffing. For this project, I designed the logo, color palette, and wireframes to help the other members of the team keep a consistent look through the site.
