@@ -49,3 +49,4 @@ This is a personal website / blog using [Gatsby](https://www.gatsbyjs.org/), [Ma
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/SaimirKapaj/gatsby-markdown-personal-website)
 
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/SaimirKapaj/gatsby-markdown-personal-website)
+# personal-website
