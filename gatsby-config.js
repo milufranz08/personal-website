@@ -52,7 +52,7 @@ module.exports = {
         background_color: `#7070FF`,
         theme_color: `#7070FF`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`
+        icon: `src/assets/images/mf_logo-01.png`
       }
     },
     `gatsby-plugin-offline`,
