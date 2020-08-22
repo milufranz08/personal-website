@@ -1,6 +1,7 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from 'react'
+import PropTypes from 'prop-types'
+import useAllPosts from '../../hooks/useAllPosts'
+// import Img from 'gatsby-image';
 import Link from 'gatsby-link';
 import { motion } from 'framer-motion';
 
@@ -9,86 +10,61 @@ import TitleSection from 'components/ui/TitleSection';
 
 import * as Styled from './styles';
 
+// Individual Post
+const Post = ({ key, title, date, url, description, tags, cover }) => (
+    <Styled.Post key={key}>
+    <Link to={url}>
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
+        <Styled.Card>
+          {/* <Styled.Image>
+            <Img src={cover} alt={title} />
+          </Styled.Image> */}
+          <Styled.Content>
+            <Styled.Date>{date}</Styled.Date>
+            <Styled.Title>{title}</Styled.Title>
+            <Styled.Description>{description}</Styled.Description>
+          </Styled.Content>
+          <Styled.Tags>
+            {tags.map((item) => (
+              <Styled.Tag key={item}>{item}</Styled.Tag>
+            ))}
+          </Styled.Tags>
+        </Styled.Card>
+      </motion.div>
+    </Link>
+  </Styled.Post>
+)
+
+Post.propTypes = {
+    key: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+}
+
+// All Posts
 const Posts = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
-    query {
-      markdownRemark(frontmatter: { category: { eq: "blog section" } }) {
-        frontmatter {
-          title
-          subtitle
-        }
-      }
-      allMarkdownRemark(
-        filter: { frontmatter: { category: { eq: "blog" }, published: { eq: true } } }
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            html
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              description
-              date(formatString: "MMM DD, YYYY")
-              tags
-              cover {
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+    const posts = useAllPosts()
 
-  const sectionTitle = markdownRemark.frontmatter;
-  const posts = allMarkdownRemark.edges;
+    return (
+        <Container section>
+            <TitleSection title="blog" subtitle="My latest posts" center />
+            <Styled.Posts>           
+                {posts.map(post => (
+                    <Post
+                        key={post.id}
+                        title={post.title}
+                        date={post.date}
+                        url={post.url}
+                        description={post.description}
+                        tags={post.tags}
+                        cover={post.cover}
+                    />
+                ))}
+            </Styled.Posts>
+        </Container>
+    )
+}
 
-  return (
-    <Container section>
-      <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
-      <Styled.Posts>
-        {posts.map((item) => {
-          const {
-            id,
-            fields: { slug },
-            frontmatter: { title, cover, description, date, tags }
-          } = item.node;
-
-          return (
-            <Styled.Post key={id}>
-              <Link to={slug}>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
-                  <Styled.Card>
-                    <Styled.Image>
-                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                    </Styled.Image>
-                    <Styled.Content>
-                      <Styled.Date>{date}</Styled.Date>
-                      <Styled.Title>{title}</Styled.Title>
-                      <Styled.Description>{description}</Styled.Description>
-                    </Styled.Content>
-                    <Styled.Tags>
-                      {tags.map((item) => (
-                        <Styled.Tag key={item}>{item}</Styled.Tag>
-                      ))}
-                    </Styled.Tags>
-                  </Styled.Card>
-                </motion.div>
-              </Link>
-            </Styled.Post>
-          );
-        })}
-      </Styled.Posts>
-    </Container>
-  );
-};
-
-export default Posts;
+export default Posts

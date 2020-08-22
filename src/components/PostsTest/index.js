@@ -16,9 +16,9 @@ const Post = ({ key, title, date, url, description, tags, cover }) => (
     <Link to={url}>
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
         <Styled.Card>
-          <Styled.Image>
-            <Img fluid={cover} alt={title} />
-          </Styled.Image>
+          {/* <Styled.Image>
+            <Img src={cover} alt={title} />
+          </Styled.Image> */}
           <Styled.Content>
             <Styled.Date>{date}</Styled.Date>
             <Styled.Title>{title}</Styled.Title>
@@ -51,7 +51,7 @@ const Posts = () => {
 
     return (
         <Container section>
-            <TitleSection title="My latest posts" subtitle="blog" center />
+            <TitleSection title="blog" subtitle="My latest posts" center />
             <Styled.Posts>           
                 {posts.map(post => (
                     <Post

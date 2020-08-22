@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const usePosts = () => {
     const data = useStaticQuery(graphql`
     query {
-      allDevArticles(limit: 4) {
+      allDevArticles(limit: 10) {
         edges {
           node {
             article {
