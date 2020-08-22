@@ -1,10 +1,10 @@
-# Gatsby Markdown Personal Website
+# Personal Website
 
 This is a personal website / blog using [Gatsby](https://www.gatsbyjs.org/), [Markdown](https://www.markdownguide.org/), [Styled Components](https://styled-components.com/), [Talwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/) & [React Font Awesome](https://github.com/FortAwesome/react-fontawesome).
 
 ## Demo
 
-[Gatsby Markdown Personal Website](https://gatsby-markdown-personal-website.netlify.app/)
+[Personal Website](http://www.milufranz.com/)
 
 ## Quick start
 
@@ -41,12 +41,3 @@ This is a personal website / blog using [Gatsby](https://www.gatsbyjs.org/), [Ma
     ```shell
     gatsby serve
     ```
-
-    Your production site is now running at `http://localhost:9000`
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/SaimirKapaj/gatsby-markdown-personal-website)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/SaimirKapaj/gatsby-markdown-personal-website)
-# personal-website
