@@ -22,6 +22,12 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-dev",
+      options: {
+        username: 'milu_franz'
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
