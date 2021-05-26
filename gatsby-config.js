@@ -22,9 +22,9 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-dev",
+      resolve: `gatsby-source-dev`,
       options: {
-        username: 'milu_franz'
+        username: `milu_franz`
       }
     },
     {
