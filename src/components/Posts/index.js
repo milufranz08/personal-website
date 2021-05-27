@@ -17,9 +17,10 @@ const Post = ({ keyId, title, date, url, description, tags, cover }) => (
     {/* <Link to={url}> */}
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
         <Styled.Card>
-          {/* <Styled.Image>
-            <Img src={cover} alt={title} />
-          </Styled.Image> */}
+          <Styled.Image>
+            {/* <Img src={cover} alt={title} /> */}
+            <img src={cover} alt={title}/>
+          </Styled.Image>
           <Styled.Content>
             <Styled.Date>{date}</Styled.Date>
             <Styled.Title>{title}</Styled.Title>
@@ -38,7 +39,7 @@ const Post = ({ keyId, title, date, url, description, tags, cover }) => (
 )
 
 Post.propTypes = {
-    keyId: PropTypes.string.isRequired,
+    keyId: PropTypes.number,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
@@ -48,7 +49,6 @@ Post.propTypes = {
 // All Posts
 const Posts = () => {
     const posts = useAllPosts()
-    console.log({posts})
 
     return (
         <Container section>
@@ -56,6 +56,7 @@ const Posts = () => {
             <Styled.Posts>           
                 {posts.map(post => (
                     <Post
+                        key={post.id}
                         keyId={post.id}
                         title={post.title}
                         date={post.date}

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import usePosts from '../../hooks/usePosts'
-// import Img from 'gatsby-image';
+import Img from 'gatsby-image';
 // import Link from 'gatsby-link';
 import { motion } from 'framer-motion';
 
@@ -17,9 +17,10 @@ const Post = ({ keyId, title, date, url, description, tags, cover }) => (
     <a href={url} target="_blank" rel="noopener noreferrer">
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
         <Styled.Card>
-          {/* <Styled.Image>
-            <Img src={cover} alt={title} />
-          </Styled.Image> */}
+          <Styled.Image>
+            {/* <Img src={cover} alt={title} /> */}
+            <img src={cover} alt={title}/>
+          </Styled.Image>
           <Styled.Content>
             <Styled.Date>{date}</Styled.Date>
             <Styled.Title>{title}</Styled.Title>
@@ -48,8 +49,6 @@ Post.propTypes = {
 // All Posts
 const Posts = () => {
     const posts = usePosts()
-
-    console.log({posts});
 
     return (
         <Container section>
