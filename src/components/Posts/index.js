@@ -11,8 +11,8 @@ import TitleSection from 'components/ui/TitleSection';
 import * as Styled from './styles';
 
 // Individual Post
-const Post = ({ key, title, date, url, description, tags, cover }) => (
-    <Styled.Post key={key}>
+const Post = ({ keyId, title, date, url, description, tags, cover }) => (
+    <Styled.Post key={keyId}>
       <a href={url} target="_blank" rel="noopener noreferrer">
     {/* <Link to={url}> */}
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
@@ -38,7 +38,7 @@ const Post = ({ key, title, date, url, description, tags, cover }) => (
 )
 
 Post.propTypes = {
-    key: PropTypes.string.isRequired,
+    keyId: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
@@ -56,7 +56,7 @@ const Posts = () => {
             <Styled.Posts>           
                 {posts.map(post => (
                     <Post
-                        key={post.id}
+                        keyId={post.id}
                         title={post.title}
                         date={post.date}
                         url={post.url}
