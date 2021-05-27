@@ -21,7 +21,7 @@ const Banner = ({ title, subtitle, content, linkTo, linkText }) => (
 );
 
 Banner.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   subtitle: PropTypes.string,
   content: PropTypes.any.isRequired,
   linkTo: PropTypes.string.isRequired,

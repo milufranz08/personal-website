@@ -11,7 +11,7 @@ import FormatHtml from 'components/utils/FormatHtml';
 import * as Styled from './styles';
 
 const BlogPost = ({ data, pageContext }) => {
-  const post = data.markdownRemark;
+  const post = data;
   const { previous, next } = pageContext;
 
   return (

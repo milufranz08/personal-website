@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import usePosts from '../../hooks/usePosts'
-import Img from 'gatsby-image';
-import Link from 'gatsby-link';
+// import Img from 'gatsby-image';
+// import Link from 'gatsby-link';
 import { motion } from 'framer-motion';
 
 import Container from 'components/ui/Container';
@@ -13,7 +13,8 @@ import * as Styled from './styles';
 // Individual Post
 const Post = ({ key, title, date, url, description, tags, cover }) => (
     <Styled.Post key={key}>
-    <Link to={url}>
+    {/* <Link to={url}> */}
+    <a href={url} target="_blank" rel="noopener noreferrer">
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
         <Styled.Card>
           {/* <Styled.Image>
@@ -31,7 +32,8 @@ const Post = ({ key, title, date, url, description, tags, cover }) => (
           </Styled.Tags>
         </Styled.Card>
       </motion.div>
-    </Link>
+    {/* </Link> */}
+    </a>
   </Styled.Post>
 )
 
