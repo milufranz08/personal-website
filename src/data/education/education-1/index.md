@@ -3,7 +3,7 @@ category: 'education'
 university: 'Sinclair Community College'
 degree: 'Associate'
 startDate: 'Dec 2009'
-endDate: 'Dec 2011'
+endDate: 'Sep 2011'
 ---
 
 Associate of Applied Science in Visual Communications, A.A.S.
